@@ -4,14 +4,14 @@
 
 @font-face {
     font-family: 'inter';
-    src: url('Inter-Regular.woff') format('woff');
+    src: url('vote-images/Inter-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserrat';
-    src: url('Montserrat-Bold.woff') format('woff');
+    src: url('vote-images/Montserrat-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -404,4 +404,5 @@ button:active, button.pressed {
 
 #ongoing {
     width: 100%;
+
 }
