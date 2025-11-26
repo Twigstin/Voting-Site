@@ -1,3 +1,89 @@
+let allCandidates = [
+    {
+        name: "Michael Anderson",
+        numOfVotes: 1000,
+        imgUrl: "man-one.jpg",
+        gender: "male"
+    },
+    {
+        name: "Emily Parker",
+        numOfVotes: 900,
+        imgUrl: "woman-three.jpg",
+        gender: "female"
+    },
+    {
+        name: "James Carter",
+        numOfVotes: 800,
+        imgUrl: "man-nine.jpg",
+        gender: "male"
+    },
+    {
+        name: "Olivia Monroe",
+        numOfVotes: 700,
+        imgUrl: "woman-two.jpg",
+        gender: "female"
+    },
+    {
+        name: "Daniel Thompson",
+        numOfVotes: 600,
+        imgUrl: "man-three.jpg",
+        gender: "male"
+    },
+    {
+        name: "Christopher Miller",
+        numOfVotes: 400,
+        imgUrl: "man-six.jpg",
+        gender: "male"
+    },
+    {
+        name: "Brandon Harris",
+        numOfVotes: 300,
+        imgUrl: "man-five.jpg",
+        gender: "male"
+    },
+    {
+        name: "Jessica Bennett",
+        numOfVotes: 200,
+        imgUrl: "woman-one.jpg",
+        gender: "female"
+    },
+];
+
+const sortedVoters = [...allCandidates].sort((a, b) => b.numOfVotes - a.numOfVotes);
+
+//get number of candidates count
+const numCandidates = document.querySelector(".num-of-candidates");
+numCandidates.innerText = sortedVoters.length;
+
+const dynamicHTML = sortedVoters
+.map(({name, numOfVotes, imgUrl, gender}, index) => {
+    return `
+                    <div class="candidate-info reveal">
+                        <div class="avatar">
+                            <img src="vote-images/${imgUrl}" alt="${name} avater">
+                        </div>
+                        <div class="info">
+                            <p data-key="name">${name}</p>
+                            <p data-key="votes"><span>${numOfVotes}</span> votes</p>
+                            <p data-key="rank">Rank: <span>${index + 1}</span></p>
+                            <div>
+                                <button class="vote-btn">Vote</button>
+                            </div>
+                        </div>
+                    </div>
+    `
+})
+.join("");
+
+//get candidates display container
+const candidatesCtn = document.getElementById("candidates-ctn");
+candidatesCtn.innerHTML = "";
+candidatesCtn.innerHTML += dynamicHTML;
+
+
+
+
+
 //get dom elements
 const upcomingElectionPage = document.getElementById("upcoming-election-page");
 const ongoingElectionPage = document.getElementById("ongoing-election-page");
@@ -54,7 +140,7 @@ backToHomeBtn.addEventListener("click", () => {
     candidateInfoPage.style.display = "none";
 });
 
-const voteBtn = document.querySelectorAll(".vote-btn");
+const voteBtn = candidatesCtn.querySelectorAll(".vote-btn");
 const infoPageAvater = document.querySelector(".info-page-avater");
 const infoPageData = document.querySelector(".info-page-data");
 
@@ -157,54 +243,3 @@ bttn.forEach(button => {
         button.classList.remove("pressed");
     })
 });
-
-let allCandidates = [
-    {
-        name: "Michael Anderson",
-        numOfVotes: 1000,
-        imgUrl: "",
-        gender: "male"
-    },
-    {
-        name: "Emily Parker",
-        numOfVotes: 900,
-        imgUrl: "",
-        gender: "female"
-    },
-    {
-        name: "James Carter",
-        numOfVotes: 800,
-        imgUrl: "",
-        gender: "male"
-    },
-    {
-        name: "Olivia Monroe",
-        numOfVotes: 700,
-        imgUrl: "",
-        gender: "female"
-    },
-    {
-        name: "Daniel Thompson",
-        numOfVotes: 600,
-        imgUrl: "",
-        gender: "male"
-    },
-    {
-        name: "Christopher Miller",
-        numOfVotes: 400,
-        imgUrl: "",
-        gender: "male"
-    },
-    {
-        name: "Brandon Harris",
-        numOfVotes: 300,
-        imgUrl: "",
-        gender: "male"
-    },
-    {
-        name: "Jessica Bennett",
-        numOfVotes: 200,
-        imgUrl: "",
-        gender: "female"
-    },
-];
