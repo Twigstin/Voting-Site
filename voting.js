@@ -60,7 +60,7 @@ const dynamicHTML = sortedVoters
     return `
                     <div class="candidate-info reveal">
                         <div class="avatar">
-                            <img src="vote-images/${imgUrl}" alt="${name} avater">
+                            <img src="vote-images/${imgUrl}" alt="${name} avater" loading="lazy">
                         </div>
                         <div class="info">
                             <p data-key="name">${name}</p>
@@ -181,6 +181,7 @@ voteBtn.forEach(btn => {
     const newImg = document.createElement("img");
     newImg.src = img.src;
     newImg.alt = img.alt;
+    newImg.loading = "lazy";
 
     infoPageAvater.appendChild(newImg);
 
@@ -243,3 +244,4 @@ bttn.forEach(button => {
         button.classList.remove("pressed");
     })
 });
+
