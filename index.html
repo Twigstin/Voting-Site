@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Twig Votes</title>
+        <link rel="stylesheet" href="voting.css">
+        <link rel="stylesheet" href="css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div><span class="brand-name">Twig Votes</span></div>
+            <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+        </header>
+        <div class="candidate-info-page reveal">
+                <div>
+                    <div class="info-page-avater"></div>
+                    <div class="info-page-data">
+                        <p data-key="name"></p>
+                        <p class="rank-txt" data-key="rank"></p>
+                        <p>$5.00 per vote</p>
+                        <p>Minimum vote is $20.00</p>
+                        <p data-key="votes"></p>
+                        <div id="vote-now-btn">
+                            <button>Vote Now</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="home-btn">
+                    <button><i class="fa-solid fa-chevron-left"></i> Back To Contestants</button>
+                </div>
+            </div>
+        <main reveal>           
+            <div class="menu-slider">
+                <div id="ongoing">
+                    <div class="ongoing-txt">
+                        <span class="ontxt">ONGOING ELECTIONS</span>
+                    <i class="fa-solid fa-bullseye menu-icon" id="ongoing-icon"></i>
+                    </div>
+                </div>
+                <div id="upcoming">
+                    <div class="upcoming-txt">
+                        <span class="uptxt">UPCOMING ELECTIONS</span>
+                        <i class="fa-solid fa-calendar-days menu-icon" id="upcoming-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="ongoing-election-page" class="reveal">
+            <section id="first-section" class="reveal">
+                <div>
+                    <p>Vote a Contestant</p>
+                    <p>May 26th to 20th June - 24 hours</p>
+                    <p>St. Maurice Youth Week Beauty Pageantry!</p>
+                </div>
+            </section>
+            <section class="sponsor-display-section reveal">
+                <div class="reveal">
+                    <div>
+                    <div><i class="fa-solid fa-globe"></i></div>
+                    <div><i class="fa-solid fa-handshake"></i></div>
+                    <div><i class="fa-solid fa-building"></i></div>
+                    <div><i class="fa-solid fa-users"></i></div>
+                    <div><i class="fa-solid fa-star"></i></div>
+                    <div><i class="fa-solid fa-gift"></i></div>
+                    <div><i class="fa-solid fa-briefcase"></i></div>
+                    <div><i class="fa-solid fa-certificate"></i></div>
+                    <div><i class="fa-solid fa-heart"></i></div>
+                    
+                    <div><i class="fa-solid fa-money-bill-wave"></i></div>
+                    </div>
+                </div>
+                <p class="copyright reveal">© 2025 ClaverStarVote Sponsors.</p>
+            </section>
+            <section id="last-section" class="reveal">
+                <p class="copyright reveal"><span class="num-of-candidates"></span> Candidates</p>
+                <div id="candidates-ctn" class="reveal"></div>
+            </section>
+            </div>
+            <div id="upcoming-election-page" class="reveal">
+                <div class="no-note-div">
+                    <div>
+                    <p><i class="fa-solid fa-hourglass-half"></i></p>
+                    <p class="not-found">Coming Soon...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="reveal">
+            <p class="copyright" class="reveal">© 2025 Twig Votes. Made with 💜 by Twigstin.</p>
+        </footer>
+        <script src="voting.js"></script>
+    </body>
+</html>
