@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('Montserrat-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'inter', sans-serif;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    overflow-x: hidden;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid gray;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(40, 40, 40, 0.97);
+    z-index: 30;
+}
+
+main {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.menu-slider {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(100, 100, 100);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.menu-slider > div {
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+}
+
+#first-section {
+    width: 100%;
+    border-top: 2px solid rgb(90, 90, 90);
+    border-bottom: 2px solid rgb(90, 90, 90);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+#first-section > div {
+    max-width: 500px;
+    border: 2px solid gray;
+    background-color: rgb(30, 30, 30);
+    margin: 30px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    color: gold;
+}
+
+#candidates-ctn {
+    padding: 25px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    background-color: rgb(30, 30, 30);
+}
+
+#last-section {
+    background-color: rgb(30, 30, 30);
+    padding-top: 10px;
+}
+
+.candidate-info {
+    height: 430px;
+    background-color: gray;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
+    border: 2px solid gray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-info > :first-child {
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.candidate-info > :first-child img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.candidate-info > :last-child {
+    background-color: blue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.candidate-info > :last-child > div {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.candidate-info > :last-child > div button {
+    padding: 10px;
+    width: 90%;
+    border: none;
+    background-color: gold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+
+footer {
+    border-top: 2px solid gray;
+}
+
+.avatar-icon {
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 100%;
+}
+
+header > :first-child {
+    padding: 2px;
+}
+
+header > div {
+    cursor: pointer;
+}
+
+.brand-name {
+    font-size: 1.3rem;
+    color: gold;
+    font-weight: bold;
+    font-family: 'montserrat', sans-serif;
+}
+
+.no-note-div {
+    width: 100%;
+    margin-top: 50px;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.no-note-div > div {
+    border: none;
+    width: auto;
+}
+
+.no-note-div > div p {
+    text-align: center;
+    
+}
+.no-note-div > div i {
+    font-size: 45px;
+    color: rgb(170, 170, 170);
+}
+
+.ongoing-txt, .upcoming-txt {
+    padding: 7px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.ongoing-txt.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+}
+
+.upcoming-txt.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+}
+
+.candidate-info-page {
+    background-color: rgb(15, 15, 15);
+    padding: 30px;
+    display: none;
+    margin-top: 80px;
+}
+
+.candidate-info-page > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    gap: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.candidate-info-page > div > div {
+    min-height: 400px;
+    text-align: center;
+}
+
+
+
+button {
+    font-family: 'inter', sans-serif;
+}
+
+.info-page-data {
+    background-color: rgb(40, 40, 40);
+    padding: 50px;
+}
+
+#vote-now-btn {
+    width: 100%;
+    text-align: center;
+}
+
+#vote-now-btn > button {
+    width: 100%;
+    padding: 10px;
+    background-color: gold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.home-btn {
+    margin: 20px auto;
+
+}
+
+.rank-txt {
+    color: rgb(94, 230, 94);
+}
+
+.home-btn button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.info-page-avater {
+    background-color: rgb(40, 40, 40);
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.info-page-avater img {
+    width: 100%;
+}
+
+.sponsor-display-section {
+    padding: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sponsor-display-section > div > div > div {
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    padding: 20px;
+    flex: 0 0 auto; /* prevent shrinking */
+    margin-right: 20px;
+    background: #4a3fe0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.sponsor-display-section > div > div > div:not(:last-child) {
+    margin-right: 20px;
+}
+
+.sponsor-display-section > div {
+    background-color: rgb(50, 50, 50);
+    width: 100%;
+    overflow: hidden;
+}
+
+.sponsor-display-section > div > div {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    padding: 20px;
+    width: max-content; /* important for scrolling */
+    animation: scroll 15s linear infinite;
+    margin: auto;
+}
+
+/* keyframes for scrolling left */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* scroll half content (because we duplicated items) */
+    }
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button {
+    transition: transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+}
+button:active, button.pressed {
+    transform: scale(0.97);
+    
+}
+
+.vote-btn {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu-icon {
+  display: none; /* hide icons by default */
+}
+
+#ongoing-icon {
+    display: none;
+}
+
+#upcoming-icon {
+    display: none;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .menu-slider {
+        justify-content: space-around;
+        font-size: 1.5rem;
+        gap: 40px;
+    }
+
+    .uptxt, .ontxt {
+        display: none;
+    }
+
+    #ongoing-icon {
+        display: inline-block;
+    }
+
+    #upcoming-icon {
+        display: inline-block;
+    }
+
+}
+
+#ongoing {
+    width: 100%;
+}
