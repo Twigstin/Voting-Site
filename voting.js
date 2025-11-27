@@ -204,7 +204,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             observer.unobserve(entry.target);
         }
     })
-}, { thereshold: 0.2 });
+}, { thereshold: 0.1 });
 reveals.forEach(reveal => observer.observe(reveal));
 
 
@@ -244,4 +244,5 @@ bttn.forEach(button => {
         button.classList.remove("pressed");
     })
 });
+
 
