@@ -122,7 +122,7 @@ section {
 }
 
 .candidate-info > :last-child {
-    background-color: blue;
+    background-color: #4a3fe0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: center;
@@ -406,3 +406,4 @@ button:active, button.pressed {
     width: 100%;
 
 }
+
